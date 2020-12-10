@@ -14,8 +14,9 @@ namespace AdventOfCode_2020_Day_02
         static void Main(string[] args)
         {
             string input = File.ReadAllText("input.txt");
-            string pattern = "([0-9]+)-([0-9]+) ([a-z]): ([a-z]+)";
-            
+            //shorter version of ([0-9]+)-([0-9]+) ([a-z]): ([a-z]+)
+            string pattern = @"(\d+)-(\d+) (\w): (\w+)";
+
             MatchCollection matches = Regex.Matches(input, pattern);
 
             Console.WriteLine("Valid Passwords Puzzle One: " + PuzzleOne(matches));
